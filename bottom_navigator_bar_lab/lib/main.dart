@@ -32,7 +32,7 @@ class _BottomNavLabState extends State<BottomNavLab> {
       title: 'Bottom Navigation Bar',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Bottom Navigation Bar Mina'),
+          title: const Text('Bottom Navigation Bar Lab 05'),
           backgroundColor: Colors.blue,
           foregroundColor: Colors.white,
         ),
