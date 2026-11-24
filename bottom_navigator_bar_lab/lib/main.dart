@@ -1,29 +1,35 @@
 import 'package:flutter/material.dart';
 
+import 'screen1.dart';
+import 'screen2.dart';
+import 'screen3.dart';
+import 'screen4.dart';
+
 void main() {
-  runApp(const BottomNavExample());
+  runApp(const BottomNavLab());
 }
 
-class BottomNavExample extends StatefulWidget {
-  const BottomNavExample({super.key});
+class BottomNavLab extends StatefulWidget {
+  const BottomNavLab({super.key});
 
   @override
-  State<BottomNavExample> createState() => _BottomNavExampleState();
+  State<BottomNavLab> createState() => _BottomNavLabState();
 }
 
-class _BottomNavExampleState extends State<BottomNavExample> {
+class _BottomNavLabState extends State<BottomNavLab> {
   int currentIndex = 0;
 
   final List<Widget> screens = const [
-    ScreenLabel('Home'),
-    ScreenLabel('Alarm'),
-    ScreenLabel('Business'),
-    ScreenLabel('School'),
+    Screen1(),
+    Screen2(),
+    Screen3(),
+    Screen4(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Bottom Navigation Bar',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Bottom Navigation Bar'),
@@ -62,19 +68,6 @@ class _BottomNavExampleState extends State<BottomNavExample> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class ScreenLabel extends StatelessWidget {
-  final String label;
-
-  const ScreenLabel(this.label, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(label),
     );
   }
 }
